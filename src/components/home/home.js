@@ -1,6 +1,6 @@
 import React from 'react';
 //import './home.scss';
-import style from '../../style/style.json';
+// import style from '../../style/style.json';
 
 const home = () => {
     return (
@@ -12,7 +12,7 @@ export default home;
 
 const styles = {
     container: {
-        backgroundColor: style.homeContainer,
+        // backgroundColor: style.homeContainer,
         height: '100vh'
     }
 }
