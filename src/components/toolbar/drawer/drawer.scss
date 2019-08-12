@@ -1,0 +1,11 @@
+.drawer {
+    width: 60%;
+    background-color: #282C34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 200;
+    left: 0px;
+}

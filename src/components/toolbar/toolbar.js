@@ -1,12 +1,15 @@
 import React from 'react';
+import Headroom from 'react-headroom';
 
 import './toolbar.scss';
 // import style from '../../style/style.json';
+import Drawer from './drawer/drawer';
 import ToolbarItem from './toolbarItem/toolbarItem';
 
 class Toolbar extends React.Component {
     state = {
-        scrolled: 0
+        scrolled: 0,
+        hamburgerActive: false
     };
 
     componentDidMount() {
@@ -22,28 +25,53 @@ class Toolbar extends React.Component {
         const winHeightPx =
             document.documentElement.scrollHeight -
             document.documentElement.clientHeight;
-        const scrolled = `${scrollPx / winHeightPx * 100}%`;
+        const scrolled = `${scrollPx / winHeightPx * 100}`;
 
-        this.setState({ scrolled });
+        this.setState({ scrolled, hamburgerActive: false });
     };
 
     render() {
 
+        const progressBarClassName = this.state.scrolled < 33
+                                        ? "progress-bar" 
+                                        : this.state.scrolled < 66 
+                                            ? "gradient-progress-bar"
+                                            : "dark-gradient-progress-bar";
+
         const progressBarStyle = {
-            width: "5px",
-            background: "#e91e63",
-            height: this.state.scrolled
-          };
+            height: `${this.state.scrolled}%`,
+        };
+
+        const mobileProgressBarStyle = {
+            width: `${this.state.scrolled}%`,
+        };
+
+        const cssHamburger = ["hamburger", "hamburger--spring", "js-hamburger", "toolbar-hamburguer", this.state.hamburgerActive ? "is-active" : ""];
 
         return (
             <div className="toolbar-container">
-                <div className="toolbar-content">
-                    <div style={styles.progressContainer}>
-                        <div style={progressBarStyle} />
+                <div className="web-page">
+                    <div style={styles.progressContainer} className="progress-container">
+                        <div style={progressBarStyle} className={progressBarClassName} />
                     </div>
-                    <ToolbarItem to="home">Home</ToolbarItem>
-                    <ToolbarItem to="profile">Profile</ToolbarItem>
-                    <ToolbarItem to="about">About</ToolbarItem>
+                    <div className="toolbar-content">
+                        <ToolbarItem to="home">Home</ToolbarItem>
+                        <ToolbarItem to="profile">Profile</ToolbarItem>
+                        <ToolbarItem to="about">About</ToolbarItem>
+                    </div>
+                </div>
+                <div className="mobile-web-page">
+                    <div style={styles.progressContainer} className="progress-container">
+                        <div style={mobileProgressBarStyle} className={progressBarClassName} />
+                    </div>
+                    <Headroom>
+                        <button class={cssHamburger.join(' ')} type="button" onClick={() => this.setState({ hamburgerActive: !this.state.hamburgerActive })}>
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </Headroom>
+                    <Drawer show={ this.state.hamburgerActive } />
                 </div>
             </div>
         );
@@ -54,13 +82,6 @@ export default Toolbar;
 
 const styles = {
     progressContainer: {
-        background: "#f8bbd0",
-        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
-        width: "5px",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        height: "100vh",
-        zIndex: 5
+        background: "#e6fffa",
     },
 }

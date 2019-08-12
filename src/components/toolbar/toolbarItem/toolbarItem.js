@@ -11,7 +11,7 @@ const toolbarItem = props => {
             to={props.to}
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-200}
             duration={600}>
                 {props.children}
         </Link>
