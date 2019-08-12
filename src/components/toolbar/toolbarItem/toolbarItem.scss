@@ -7,12 +7,33 @@
     border-radius: 5px;
     font-size: 18px;
     -webkit-box-shadow: 2px 2px 16px -2px rgba(0,0,0,0.72);
--moz-box-shadow: 2px 2px 16px -2px rgba(0,0,0,0.72);
-box-shadow: 2px 2px 16px -2px rgba(0,0,0,0.72);
+    -moz-box-shadow: 2px 2px 16px -2px rgba(0,0,0,0.72);
+    box-shadow: 2px 2px 16px -2px rgba(0,0,0,0.72);
 }
 
 .toolbar-item-container:hover {
     background: rgb(40,44,52);
     background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(111,122,144,1) 50%, rgba(40,44,52,1) 100%);
     cursor: pointer;
+}
+
+.toolbar-item-active {
+    background: rgb(40,44,52);
+    background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(111,122,144,1) 50%, rgba(40,44,52,1) 100%);
+    animation: onHandleActiveItem 0.3s ease-out;
+}
+
+@keyframes onHandleActiveItem {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

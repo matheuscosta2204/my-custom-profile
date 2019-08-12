@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import './toolbarItem.scss';
 
 const toolbarItem = props => {
     return (
-        <div className="toolbar-item-container">
-            {props.children}
-        </div>
+        <Link 
+            className="toolbar-item-container"
+            activeClass="toolbar-item-active"
+            to={props.to}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={600}>
+                {props.children}
+        </Link>
     );
 }
 

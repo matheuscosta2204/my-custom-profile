@@ -4,18 +4,18 @@ import { Element } from 'react-scroll';
 //import './home.scss';
 // import style from '../../style/style.json';
 
-const home = () => {
+const footer = () => {
     return (
-        <Element id="home" style={styles.container}>Home</Element>
+        <Element id="footer" style={styles.container}>Footer</Element>
     );
 }
 
-export default home;
+export default footer;
 
 const styles = {
     container: {
         // backgroundColor: style.homeContainer,
-        height: '100vh',
+        height: '20vh',
         color: 'white',
     }
 }

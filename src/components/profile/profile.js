@@ -4,13 +4,13 @@ import { Element } from 'react-scroll';
 //import './home.scss';
 // import style from '../../style/style.json';
 
-const home = () => {
+const profile = () => {
     return (
-        <Element id="home" style={styles.container}>Home</Element>
+        <Element id="profile" style={styles.container}>Profile</Element>
     );
 }
 
-export default home;
+export default profile;
 
 const styles = {
     container: {

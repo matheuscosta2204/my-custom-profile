@@ -1,5 +1,11 @@
 .toolbar-container {
+    width: 200px;
+}
+
+.toolbar-content {
     width: 150px;
+    height: 100vh;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;

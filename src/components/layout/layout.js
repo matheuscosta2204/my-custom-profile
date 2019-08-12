@@ -4,6 +4,9 @@ import style from '../../style/style.json';
 import './layout.scss';
 import Toolbar from '../toolbar/toolbar';
 import Home from '../home/home';
+import Profile from '../profile/profile';
+import About from '../about/about';
+import Footer from '../footer/footer';
 
 const layout = () => {
     return (
@@ -11,6 +14,9 @@ const layout = () => {
             <Toolbar />
             <div className="layout-content">
                 <Home />
+                <Profile />
+                <About />
+                <Footer />
             </div>
         </div>
     );
