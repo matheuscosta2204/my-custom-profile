@@ -14,8 +14,8 @@ export default about;
 
 const styles = {
     container: {
-        // backgroundColor: style.homeContainer,
-        height: '80vh',
+        backgroundImage: 'linear-gradient(to right, #282c34, #2b303a, #2f3440, #323846, #363c4c)',
+        height: '75vh',
         color: 'white',
     }
 }

@@ -14,8 +14,8 @@ export default footer;
 
 const styles = {
     container: {
-        // backgroundColor: style.homeContainer,
-        height: '20vh',
+        backgroundColor: '#0b0c0e',
+        height: '25vh',
         color: 'white',
     }
 }

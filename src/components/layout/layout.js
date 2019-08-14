@@ -10,15 +10,17 @@ import Footer from '../footer/footer';
 
 const layout = () => {
     return (
-        <div className="layout-container" style={styles.container}>
-            <Toolbar />
-            <div className="layout-content">
-                <Home />
-                <Profile />
-                <About />
-                <Footer />
+        <>
+            <div className="layout-container" style={styles.container}>
+                <Toolbar />
+                <div className="layout-content">
+                    <Home />
+                    <Profile />
+                    <About />
+                </div>
             </div>
-        </div>
+            <Footer />
+        </>
     );
 }
 
