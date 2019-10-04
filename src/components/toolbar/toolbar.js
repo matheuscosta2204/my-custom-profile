@@ -39,10 +39,6 @@ class Toolbar extends React.Component {
                                             : "dark-gradient-progress-bar";
 
         const progressBarStyle = {
-            height: `${this.state.scrolled}%`,
-        };
-
-        const mobileProgressBarStyle = {
             width: `${this.state.scrolled}%`,
         };
 
@@ -62,7 +58,7 @@ class Toolbar extends React.Component {
                 </div>
                 <div className="mobile-web-page">
                     <div style={styles.progressContainer} className="progress-container">
-                        <div style={mobileProgressBarStyle} className={progressBarClassName} />
+                        <div style={progressBarStyle} className={progressBarClassName} />
                     </div>
                     <Headroom>
                         <button class={cssHamburger.join(' ')} type="button" onClick={() => this.setState({ hamburgerActive: !this.state.hamburgerActive })}>

@@ -3,8 +3,9 @@ import { Element } from 'react-scroll';
 
 import './home.scss';
 import HeartBeating from '../../media/svg/heartBeating';
+import DownArrow from '../../media/svg/downArrow';
 
-const home = () => {
+const home = (props) => {
     return (
         <Element id="home" style={styles.container} className="home">
             <div className="entrance-container">
@@ -18,6 +19,9 @@ const home = () => {
                         <p>Javascript!</p>
                         <HeartBeating />
                     </div>
+                </div>
+                <div style={{ width: '50px', position: 'fixed', bottom: 20, cursor: 'pointer' }} onClick={() => props.scrollTo(1)}>
+                    <DownArrow />
                 </div>
             </div>
         </Element>

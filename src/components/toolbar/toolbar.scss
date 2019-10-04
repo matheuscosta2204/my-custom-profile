@@ -1,13 +1,12 @@
 .toolbar-container {
-    width: 200px;
+    height: 100px;
 }
 
 .toolbar-content {
-    width: 150px;
-    height: 100vh;
-    position: fixed;
+    width: 100wh;
+    height: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
