@@ -1,9 +1,9 @@
 import React from 'react';
 import Parallax from 'react-springy-parallax';
 
-import style from '../../style/style.json';
+//import style from '../../style/style.json';
 import './layout.scss';
-import Toolbar from '../toolbar/toolbar';
+//import Toolbar from '../toolbar/toolbar';
 import Home from '../home/home';
 import Profile from '../profile/profile';
 import About from '../about/about';
@@ -74,8 +74,8 @@ class Layout extends React.Component {
 
 export default Layout;
 
-const styles = {
-    container: {
-        backgroundColor: style.homeContainer,
-    }
-}
+// const styles = {
+//     container: {
+//         backgroundColor: style.homeContainer,
+//     }
+// }

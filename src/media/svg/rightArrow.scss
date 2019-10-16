@@ -1,0 +1,17 @@
+@keyframes rightArrow {
+    from {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(1.5px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+  
+.right-arrow {
+    animation: rightArrow 0.4s infinite linear;
+}
