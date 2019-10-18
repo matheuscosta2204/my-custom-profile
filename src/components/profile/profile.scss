@@ -11,3 +11,12 @@
     justify-content: center;
     flex-wrap:wrap;
 }
+
+.projects-container > .card-container:hover {
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

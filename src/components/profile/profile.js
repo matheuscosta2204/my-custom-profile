@@ -58,7 +58,7 @@ class Profile extends React.Component {
             );
         } else {
             return (
-                <div className="projects-container" style={projectsStyle}>
+                <div className="projects-container" style={{ zIndex: 1, ...projectsStyle }}>
                     <div style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}>
                         <div className="projects">
                             {projects.map(project => (
