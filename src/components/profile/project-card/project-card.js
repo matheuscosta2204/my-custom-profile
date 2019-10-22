@@ -12,9 +12,7 @@ const projectCard = (props) => {
             href={props.project.url} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="card-container" 
-            onMouseOver={() => props.changeBackground(props.project.backgroundImage)} 
-            onMouseLeave={() => props.changeBackground("")}>
+            className="card-container">
             <div className="card-header">
                 <div className="card-thumb">
                     <img src={url(props.project.thumbImage)} className="card-image" alt="project-logo" />

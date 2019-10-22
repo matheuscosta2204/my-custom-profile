@@ -13,6 +13,11 @@
     color: black;
 }
 
+.card-container:hover {
+    animation: zoom .3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 .card-thumb {
     width: 100%;
     height: 100%;
@@ -48,4 +53,27 @@
 
 .item-footer {
     margin-left: 5px;
+}
+
+@keyframes zoom {
+    0% { 
+        transform: scale(1.0) rotate(0);
+    }
+    50% { 
+        transform: scale(1.15) rotate(5deg);
+    }
+    100% { 
+        transform: scale(1.1) rotate(0);
+    }
+}
+
+@media screen and (max-width: 1445px) {
+    .card-container {
+        width: 250px;
+        height: 350px;
+    }
+
+    .footer-container {
+        width: 40%;
+    }
 }
