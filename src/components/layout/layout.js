@@ -2,13 +2,10 @@ import React from 'react';
 import Parallax from 'react-springy-parallax';
 import Media from 'react-media';
 
-//import style from '../../style/style.json';
 import './layout.scss';
-//import Toolbar from '../toolbar/toolbar';
 import Home from '../home/home';
 import Profile from '../profile/profile';
 import About from '../about/about';
-import Footer from '../footer/footer';
 
 import ReactLogo from '../../media/svg/reactLogo';
 
@@ -39,7 +36,6 @@ class Layout extends React.Component {
                                 style={{ backgroundImage: url('binary-stars', true), backgroundSize: 'cover' }}/>
 
                             <Parallax.Layer offset={1.4} speed={-0.7} style={{ pointerEvents: 'none' }}>
-                                {/* <img src={url('logo')} style={{ width: '15%', marginLeft: '80%' }} /> */}
                                 <div style={{ width: '15%', marginLeft: '80%' }}>
                                     <ReactLogo />
                                 </div>
@@ -58,10 +54,9 @@ class Layout extends React.Component {
                             </Parallax.Layer>
 
                             <Parallax.Layer
-                                offset={2.5} speed={0} 
+                                offset={3} speed={0}
                                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <About />
-                                    <Footer />
+                                        <About />
                             </Parallax.Layer>
                         </Parallax>}
                         {matches.small &&
@@ -76,7 +71,6 @@ class Layout extends React.Component {
                                 style={{ backgroundImage: url('binary-stars', true), backgroundSize: 'cover' }}/>
 
                             <Parallax.Layer offset={1.4} speed={-0.7} style={{ pointerEvents: 'none' }}>
-                                {/* <img src={url('logo')} style={{ width: '15%', marginLeft: '80%' }} /> */}
                                 <div style={{ width: '15%', marginLeft: '80%' }}>
                                     <ReactLogo />
                                 </div>
@@ -96,9 +90,8 @@ class Layout extends React.Component {
 
                             <Parallax.Layer
                                 offset={5.5} speed={0} 
-                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                                     <About />
-                                    <Footer />
                             </Parallax.Layer>
                         </Parallax>}
                     </>

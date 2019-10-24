@@ -21,7 +21,7 @@ const projectCard = (props) => {
             <div className="card-title">{props.project.title}</div>
             <div className="card-description">{limitStringLenght(props.project.description, 150, true)}</div>
             <div className="card-footer">
-                <div className="footer-container">
+                <div className="card-footer-container">
                     <div style={{ width: '15px' }}>
                         <RightArrow />
                     </div>
