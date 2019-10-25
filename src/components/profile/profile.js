@@ -72,7 +72,7 @@ class Profile extends React.Component {
                         <ProjectCard project={project} key={project.id} />
                     ))}
                 </div>
-                <div className="projects-down-arrow" onClick={() => this.props.scrollTo(2.5)}>
+                <div className="projects-down-arrow" onClick={() => this.props.scrollTo(2.9)}>
                     <DownArrow />
                 </div>
             </div>
