@@ -23,16 +23,16 @@ const about = () => {
                             <h3>{data.fullName}</h3>
                             <h4>{data.local}</h4>
                             <div className="gmail">
-                                <img src="/assets/svg/cellphone-logo.svg" className="about-contact-icons-item" alt="Phone" />
+                                <img src="assets/svg/cellphone-logo.svg" className="about-contact-icons-item" alt="Phone" />
                                 <p>{data.phone}</p>
                             </div>
                             <div className="gmail">
-                                <img src="/assets/svg/google-logo.svg" className="about-contact-icons-item" alt="Gmail" />
+                                <img src="assets/svg/google-logo.svg" className="about-contact-icons-item" alt="Gmail" />
                                 <p>{data.email}</p>
                             </div>
                             <div className="about-contact-icons">
-                                <a href={data.linkedin} target="_blank" rel="noopener noreferrer"><img src="/assets/svg/linkedin-logo.svg" className="about-contact-icons-item" alt="LinkedIn" /></a>
-                                <a href={data.github} target="_blank" rel="noopener noreferrer"><img src="/assets/svg/github-logo.svg" className="about-contact-icons-item" alt="GitHub" /></a>
+                                <a href={data.linkedin} target="_blank" rel="noopener noreferrer"><img src="assets/svg/linkedin-logo.svg" className="about-contact-icons-item" alt="LinkedIn" /></a>
+                                <a href={data.github} target="_blank" rel="noopener noreferrer"><img src="assets/svg/github-logo.svg" className="about-contact-icons-item" alt="GitHub" /></a>
                             </div>
                         </div>
                     </div>
