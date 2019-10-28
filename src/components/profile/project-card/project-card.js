@@ -19,7 +19,7 @@ const projectCard = (props) => {
                 </div>
             </div>
             <div className="card-title">{props.project.title}</div>
-            <div className="card-description">{limitStringLenght(props.project.description, 120, true)}</div>
+            <div className="card-description">{limitStringLenght(props.project.description, 100, true)}</div>
             <div className="card-footer">
                 <div className="card-footer-container">
                     <div style={{ width: '15px' }}>

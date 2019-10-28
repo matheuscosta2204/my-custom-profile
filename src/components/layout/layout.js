@@ -99,11 +99,11 @@ class Layout extends React.Component {
                         <Parallax
                             ref={ref => this.parallax = ref}
                             style={{ backgroundColor: '#282C34' }}
-                            pages={10}
+                            pages={12}
                             scrolling={true}>
 
                             <Parallax.Layer
-                                offset={0} speed={0} factor={10}
+                                offset={0} speed={0} factor={12}
                                 style={{ backgroundImage: url('binary-stars', true), backgroundSize: 'cover' }}/>
 
                             <Parallax.Layer offset={1.4} speed={-0.7} style={{ pointerEvents: 'none' }}>
@@ -125,7 +125,7 @@ class Layout extends React.Component {
                             </Parallax.Layer>
 
                             <Parallax.Layer
-                                offset={5} speed={0} factor={2}
+                                offset={6.5} speed={0} factor={2}
                                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                                     <About />
                             </Parallax.Layer>
