@@ -1,5 +1,6 @@
 import React from 'react';
 
+import data from '../../data/data.json';
 import './about.scss';
 import ProfilePic from '../../media/images/profile-pic.png';
 
@@ -13,25 +14,25 @@ const about = () => {
                             About Me
                         </div>
                         <div className="about-text">
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;I am a Javascript Developer, graduated in Computer Science at Barão de Mauá's University since 2018. I have been working with ReactJS and React Native for the past 3 years. I also have worked with .NET Core, ExpressJS, PHP, SQL Server and Mongodb.</p>
+                            <p>{data.aboutText}</p>
                         </div>
                         <div className="about-title">
                             Contact
                         </div>
                         <div className="about-contact-container">
-                            <h3>Matheus Heitor Sant'ana da Costa</h3>
-                            <h4>São Paulo, Brazil</h4>
-                            <a href="" target="_blank" className="gmail">
-                                <img src="/assets/svg/cellphone-logo.svg" className="about-contact-icons-item" alt="Gmail" />
-                                <p>+55 (16) 99207-4368</p>
-                            </a>
-                            <a href="" target="_blank" className="gmail">
+                            <h3>{data.fullName}</h3>
+                            <h4>{data.local}</h4>
+                            <div className="gmail">
+                                <img src="/assets/svg/cellphone-logo.svg" className="about-contact-icons-item" alt="Phone" />
+                                <p>{data.phone}</p>
+                            </div>
+                            <div className="gmail">
                                 <img src="/assets/svg/google-logo.svg" className="about-contact-icons-item" alt="Gmail" />
-                                <p>matheuscosta2204@gmail.com</p>
-                            </a>
+                                <p>{data.email}</p>
+                            </div>
                             <div className="about-contact-icons">
-                                <a href="" target="_blank"><img src="/assets/svg/linkedin-logo.svg" className="about-contact-icons-item" alt="LinkedIn" /></a>
-                                <a href="" target="_blank"><img src="/assets/svg/github-logo.svg" className="about-contact-icons-item" alt="GitHub" /></a>
+                                <a href={data.linkedin} target="_blank" rel="noopener noreferrer"><img src="/assets/svg/linkedin-logo.svg" className="about-contact-icons-item" alt="LinkedIn" /></a>
+                                <a href={data.github} target="_blank" rel="noopener noreferrer"><img src="/assets/svg/github-logo.svg" className="about-contact-icons-item" alt="GitHub" /></a>
                             </div>
                         </div>
                     </div>
@@ -43,8 +44,14 @@ const about = () => {
             <div className="about-background">
                 <div className="about-education">
                     <div className="about-education-content">
-                        <h3>Computer Science</h3>
-                        <p>Centro Universitário Barão de Mauá - Jan 2014 / Dec 2018</p>
+                        <div className="about-education-text">
+                            {data.educationBackground.map(education => (
+                                <div key={education.id}>
+                                    <h3>{education.graduation}</h3>
+                                    <p>{education.at} - {education.period}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className="about-education-title">
                         Education
@@ -52,17 +59,14 @@ const about = () => {
                 </div>
                 <div className="about-education">
                     <div className="about-education-content">
-                        <h3>NanoDegree(React Developer)</h3>
-                        <p>Udacity</p>
-                        
-                        <h3>React - The Complete Guide (incl Hooks, React Router, Redux)</h3>
-                        <p>Udemy, Maximilian Schwarzmüller</p>
-
-                        <h3>MERN Stack Front To Back: Full Stack React, Redux & Node.js</h3>
-                        <p>Udemy, Brad Traversy</p>
-
-                        <h3>React JS Web Development - The Essentials Bootcamp</h3>
-                        <p>Udemy, David Joseph Katz</p>
+                        <div className="about-education-text">
+                            {data.courses.map(course => (
+                                <div key={course.id}>
+                                    <h3>{course.title}</h3>
+                                    <p>{course.details}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className="about-education-title">
                         Courses
@@ -70,21 +74,15 @@ const about = () => {
                 </div>
                 <div className="about-education">
                     <div className="about-education-content">
-                        <h3>Intern​,​ Centro Universitário Barão de Mauá</h3>
-                        <p>Ribeirão Preto - São Paulo (Mar/2014 – Apr/2016)</p>
-                        <p>I have worked as a Full Stack Web Developer using PHP, HTML, CSS, Javascript(jQuery) and SQL Server.</p>
-
-                        <h3>Junior Software Developer​, Centro Universitário Barão de Mauá</h3>
-                        <p>Ribeirão Preto - São Paulo (May/2016 – Apr/2017)</p>
-                        <p>I have worked as a PHP Full Stack Web Developer. I also have worked with processmaker converting papers workflows into systems.</p>
-
-                        <h3>Mid Level Software Developer​, Centro Universitário Barão de Mauá</h3>
-                        <p>Ribeirão Preto - São Paulo (May/2017 – Dec/2018)</p>
-                        <p>I have worked as a React Native Developer and I have built APIs using .Net Core</p>
-
-                        <h3>Junior Systems Analyst​, Centro Universitário Barão de Mauá</h3>
-                        <p>Ribeirão Preto - São Paulo (Jan/2019 – Currently)</p>
-                        <p>I have worked as a React Native Developer and I have built APIs using .Net Core</p>
+                        <div className="about-education-text">
+                            {data.experiences.map(experience => (
+                                <div key={experience.id}>
+                                    <h3>{experience.title}</h3>
+                                    <p>{experience.at} ({experience.period})</p>
+                                    <p>{experience.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className="about-education-title">
                         Experience
@@ -92,12 +90,14 @@ const about = () => {
                 </div>
                 <div className="about-education">
                     <div className="about-education-content">
-                        <h3>Coding</h3>
-                        <p>Javascript(ReactJS, React Native, ExpressJS), Redux, c#(.Net Core), PHP, SQL Server, MySQL, MongoDB</p>
-                        <h3>Tools</h3>
-                        <p>Git, NPM/Yarn, Trello</p>
-                        <h3>Languages</h3>
-                        <p>English, Advanced / Portuguese, Native</p>
+                        <div className="about-education-text">
+                            {data.technicalSkills.map(skill => (
+                                <div key={skill.id}>
+                                    <h3>{skill.title}</h3>
+                                    <p>{skill.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className="about-education-title">
                         Technical Skills

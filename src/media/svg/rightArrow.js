@@ -4,7 +4,7 @@ import './rightArrow.scss';
 
 const rightArrow = () => {
     return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451.847 451.847" class="right-arrow">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451.847 451.847" className="right-arrow">
 			<g>
 			<path fill="#FFF" d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
 					L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284

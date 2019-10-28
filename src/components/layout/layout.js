@@ -19,8 +19,9 @@ class Layout extends React.Component {
         return (
             <>
             <Media queries={{
-                small: "(max-width: 675px)",
-                large: "(min-width: 676px)"
+                mobile: "(max-width: 675px)",
+                small: "(max-width: 1015px)",
+                large: "(min-width: 1016px)"
             }}>
                 {matches => (
                     <>
@@ -54,7 +55,7 @@ class Layout extends React.Component {
                             </Parallax.Layer>
 
                             <Parallax.Layer
-                                offset={2.5} speed={0} factor={2}
+                                offset={2.9} speed={0} factor={2}
                                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                         <About />
                             </Parallax.Layer>
@@ -63,11 +64,11 @@ class Layout extends React.Component {
                         <Parallax
                             ref={ref => this.parallax = ref}
                             style={{ backgroundColor: '#282C34' }}
-                            pages={7}
+                            pages={5.5}
                             scrolling={true}>
 
                             <Parallax.Layer
-                                offset={0} speed={0} factor={4}
+                                offset={0} speed={0} factor={5.5}
                                 style={{ backgroundImage: url('binary-stars', true), backgroundSize: 'cover' }}/>
 
                             <Parallax.Layer offset={1.4} speed={-0.7} style={{ pointerEvents: 'none' }}>
@@ -89,7 +90,42 @@ class Layout extends React.Component {
                             </Parallax.Layer>
 
                             <Parallax.Layer
-                                offset={5.5} speed={0} 
+                                offset={3} speed={0}
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                                    <About />
+                            </Parallax.Layer>
+                        </Parallax>}
+                        {matches.mobile &&
+                        <Parallax
+                            ref={ref => this.parallax = ref}
+                            style={{ backgroundColor: '#282C34' }}
+                            pages={10}
+                            scrolling={true}>
+
+                            <Parallax.Layer
+                                offset={0} speed={0} factor={10}
+                                style={{ backgroundImage: url('binary-stars', true), backgroundSize: 'cover' }}/>
+
+                            <Parallax.Layer offset={1.4} speed={-0.7} style={{ pointerEvents: 'none' }}>
+                                <div style={{ width: '15%', marginLeft: '80%' }}>
+                                    <ReactLogo />
+                                </div>
+                            </Parallax.Layer>
+
+                            <Parallax.Layer 
+                                offset={0} speed={0.5} 
+                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Home scrollTo={this._scrollTo} />
+                            </Parallax.Layer>
+
+                            <Parallax.Layer
+                                offset={1.5} speed={0}
+                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Profile scrollTo={this._scrollTo} />
+                            </Parallax.Layer>
+
+                            <Parallax.Layer
+                                offset={5} speed={0} factor={2}
                                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                                     <About />
                             </Parallax.Layer>

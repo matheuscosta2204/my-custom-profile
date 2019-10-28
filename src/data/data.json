@@ -1,0 +1,132 @@
+{
+    "firstName": "Matheus",
+    "lastName": "Costa",
+    "projects": [
+        {
+            "id": "1",
+            "title": "Would You Rather",
+            "description": "Web Application created to study Redux and it is a system to ask and answer (Would you rather...) questions.",
+            "thumbImage": "would-you-rather-logo",
+            "url": "https://github.com/matheuscosta2204/would-you-rather"
+        },
+        {
+            "id": "2",
+            "title": "Mobile Flashcards",
+            "description": "Mobile App to create cards to remember your wishes or activities.",
+            "thumbImage": "flashcards-logo",
+            "url": "https://github.com/matheuscosta2204/mobile-flashcards"
+        },
+        {
+            "id": "3",
+            "title": "My Reads",
+            "description": "Web Application to organize your books. There is a shelf to organize in Read, Want to Read and Reading and also a page to search new books.",
+            "thumbImage": "my-reads-logo",
+            "url": "https://github.com/matheuscosta2204/udacity-my-reads"
+        },
+        {
+            "id": "4",
+            "title": "Marmitapp API",
+            "description": "API made to be used by the mobile app that will be developed. (packed lunch delivery)",
+            "thumbImage": "marmitapp-logo",
+            "url": "https://github.com/matheuscosta2204/MarmitappAPI"
+        },
+        {
+            "id": "5",
+            "title": "Luiza Confeitaria",
+            "description": "Web Application to spread the cake house name in the internet.",
+            "thumbImage": "cake-house-logo",
+            "url": "https://github.com/matheuscosta2204/cake-house"
+        },
+        {
+            "id": "6",
+            "title": "Barão Online",
+            "description": "Mobile App to help students to have an easier access to the student area.",
+            "thumbImage": "barao-online-logo",
+            "url": "https://play.google.com/store/apps/details?id=com.newbaraoonline"
+        }
+    ],
+    "aboutText": "I am a Javascript Developer, graduated in Computer Science at Barão de Mauá's University since 2018. I have been working with ReactJS and React Native for the past 3 years. I also have worked with .NET Core, ExpressJS, PHP, SQL Server and Mongodb.",
+    "fullName": "Matheus Heitor Sant'ana da Costa",
+    "local": "São Paulo, Brazil",
+    "phone": "+55 (16) 99207-4368",
+    "email": "matheuscosta2204@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/matheus-costa-677589169/?locale=en_US",
+    "github": "https://github.com/matheuscosta2204",
+    "educationBackground": [
+        {
+            "id": "1",
+            "graduation": "Computer Science",
+            "at": "Centro Universitário Barão de Mauá",
+            "period": "Jan 2014 - Dec 2018"
+        }
+    ],
+    "courses": [
+        {
+            "id": "1",
+            "title": "NanoDegree(React Developer)",
+            "details": "Udacity"
+        },
+        {
+            "id": "2",
+            "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+            "details": "Udemy, Maximilian Schwarzmüller"
+        },
+        {
+            "id": "3",
+            "title": "MERN Stack Front To Back: Full Stack React, Redux & Node.js",
+            "details": "Udemy, Brad Traversy"
+        },
+        {
+            "id": "4",
+            "title": "React JS Web Development - The Essentials Bootcamp",
+            "details": "Udemy, David Joseph Katz"
+        }
+    ],
+    "experiences": [
+        {
+            "id": "1",
+            "title": "Intern​,​ Centro Universitário Barão de Mauá",
+            "at": "São Paulo, Ribeirão Preto",
+            "period": "Mar/2014 – Apr/2016",
+            "description": "I have worked as a Full Stack Web Developer using PHP, HTML, CSS, Javascript(jQuery) and SQL Server."
+        },
+        {
+            "id": "2",
+            "title": "Junior Software Developer​, Centro Universitário Barão de Mauá",
+            "at": "São Paulo, Ribeirão Preto",
+            "period": "May/2016 – Apr/2017",
+            "description": "I have worked as a PHP Full Stack Web Developer. I also have worked with processmaker converting papers workflows into systems."
+        },
+        {
+            "id": "3",
+            "title": "Mid Level Software Developer​, Centro Universitário Barão de Mauá",
+            "at": "São Paulo, Ribeirão Preto",
+            "period": "May/2017 – Dec/2018",
+            "description": "I have worked as a React Native Developer and I have built APIs using .Net Core"
+        },
+        {
+            "id": "4",
+            "title": "Junior Systems Analyst​, Centro Universitário Barão de Mauá",
+            "at": "São Paulo, Ribeirão Preto",
+            "period": "Jan/2019 – Currently",
+            "description": "I have worked as a React Native Developer and I have built APIs using .Net Core"
+        }
+    ],
+    "technicalSkills": [
+        {
+            "id": "1",
+            "title": "Coding",
+            "description": "Javascript(ReactJS, React Native, ExpressJS), Redux, c#(.Net Core), PHP, SQL Server, MySQL, MongoDB"
+        },
+        {
+            "id": "2",
+            "title": "Tools",
+            "description": "Git, NPM/Yarn, Trello"
+        },
+        {
+            "id": "3",
+            "title": "Languages",
+            "description": "English, Advanced / Portuguese, Native"
+        }
+    ]
+}
